@@ -1,0 +1,645 @@
+@font-face {
+  font-family: 'Minecraft';
+  src: url('fonts/mcfont.eot');
+  src: url('fonts/mcfont.woff') format('woff'),
+       url('fonts/mcfont.ttf')  format('truetype')
+}
+* {
+	font-family:'Minecraft';
+}
+.button {
+  height: 50px;
+  width: 400px;
+  outline: 2px solid black;
+  margin: 0;
+  display: inline-block;
+  background-image: url('css/button_center.png');
+  background-repeat: repeat;
+  padding: 0;
+  font-family: Minecraft;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px #4C4C4C;
+  border-bottom: 4px solid #565656;
+  border-right: 2px solid #565656;
+  border-left: 2px solid #AAA;
+  border-top: 2px solid #AAA;
+  box-sizing: border-box;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.button span {
+  position: relative;
+  line-height: 40px;
+  bottom: 3px;
+}
+
+.button:hover {
+  border-bottom: 4px solid #59639A;
+  border-right: 2px solid #59639A;
+  border-left: 2px solid #BDC6FF;
+  border-top: 2px solid #BDC6FF;
+  background-image: url('css/button_active_center.png');
+  color: #FFFFA0;
+}
+#spawnButton{
+	/* position: fixed; */
+	/* top: 50%; */
+	/* left: 50%; */
+  	/* bring your own prefixes */
+	/* transform: translate(-50%, -50%); */
+	height: 77px;
+	margin-top: 9px;
+	cursor: pointer;
+	background:#37feb8;
+	font-size: 32px;
+	width: 100%;
+}
+
+#logo-wrap
+{
+	position: absolute;
+	top: 50px;
+	width:100%;
+	z-index:1;
+}
+
+div#cross-promo{
+ position:absolute;
+	height:100px;
+	width:160px;
+	right:0px;
+	bottom:0px;
+	z-index: 9999;
+}
+
+#cross-promo-img {
+	width:100%;
+	height:100%;
+}
+
+@media (
+	max-width:1360px) {
+     #cross-promo{
+          width: 100px;
+	height: 80px;
+	top:120px;
+     }
+}
+
+@media (
+	max-width:1240px) and (max-height:728px) {
+     #cross-promo{
+          display:none;
+     }
+}
+	h1#logo{
+ font-size: 70px;
+	color:#fff;
+	text-align:center;
+	z-index:2;
+	position:absolute;
+	width:100%;
+	text-shadow: 0px 5px rgba(255,255,255,0.5);
+}
+
+
+#left-wrap {
+	position:absolute;
+	top: 335;
+	left:50%;
+	margin-left: -550px;
+	width: 336;
+	height: 280px;
+	background-color: rgba(0,0,0,0.5);
+	z-index:1;
+	/* display: none; */
+	margin-top: -120px;
+	text-align: center;
+	/* border-radius: 12px; */
+}
+	div#middle-wrap {
+    #background-color: #0000ff85;
+	position: absolute;
+	top: 350px;
+	left: 50%;
+	width: 408px;
+	margin-top: -136px;
+	margin-left: -204px;
+	height: 420px;
+	z-index: 1;
+}
+	div#right-wrap
+{
+ position: absolute;
+	top: 320;
+	left: 50%;
+	margin-top: -136px;
+	margin-left: 214px;
+	width: 336;
+	height: 280px;
+	background-color: rgba(255, 255, 255, 0.5);
+	z-index: 1;
+	/* display: none; */
+	margin-top: -105px;
+	text-align: center;
+	/* border-radius: 10px; */
+	overflow: auto;
+}
+	div#bottom-wrap {
+    position: absolute;
+	top: 280;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 255px;
+	width: 980px;
+	height: 260px;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 1;
+	text-align: center;
+};
+#logo-wrap
+{
+	position: absolute;
+	top: 50px;
+	width:100%;
+	z-index:1;
+}
+	div#cross-promo{
+ position:absolute;
+	height:100px;
+	width:160px;
+	right:0px;
+	bottom:0px;
+	z-index: 9999;
+}
+
+#cross-promo-img {
+	width:100%;
+	height:100%;
+}
+
+@media (
+	max-width:1360px) {
+     #cross-promo{
+          width: 100px;
+	height: 80px;
+	top:120px;
+     }
+}
+
+@media (
+	max-width:1240px) and (max-height:728px) {
+     #cross-promo{
+          display:none;
+     }
+}
+	h1#logo{
+ font-size: 70px;
+	color:#fff;
+	text-align:center;
+	z-index:2;
+	position:absolute;
+	width:100%;
+	text-shadow: 0px 5px rgba(255,255,255,0.5);
+}
+
+
+#left-wrap {
+	position:absolute;
+	top: 335;
+	left:50%;
+	margin-left: -550px;
+	width: 336;
+	height: 280px;
+	background-color: rgba(0,0,0,0.5);
+	z-index:1;
+	/* display: none; */
+	margin-top: -120px;
+	text-align: center;
+	/* border-radius: 12px; */
+}
+	div#middle-wrap {
+    #background-color: #0000ff85;
+	position: absolute;
+	top: 350px;
+	left: 50%;
+	width: 408px;
+	margin-top: -136px;
+	margin-left: -204px;
+	height: 420px;
+	z-index: 1;
+}
+	div#right-wrap
+{
+ position: absolute;
+	top: 320;
+	left: 50%;
+	margin-top: -136px;
+	margin-left: 214px;
+	width: 336;
+	height: 280px;
+	background-color: rgba(255, 255, 255, 0.5);
+	z-index: 1;
+	/* display: none; */
+	margin-top: -105px;
+	text-align: center;
+	/* border-radius: 10px; */
+	overflow: auto;
+}
+	div#bottom-wrap {
+    position: absolute;
+	top: 280;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 255px;
+	width: 980px;
+	height: 260px;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 1;
+	text-align: center;
+};
+}
+#skinsbutton {
+	outline:none;
+	border-radius:0px;
+	width: 30%;
+	background-color: #ababab;
+	cursor:pointer;
+}
+.skinsbutton {
+	outline:none;
+	border-radius:0px;
+	width:auto;
+}
+#leaderboard {
+	color:white;
+	font-family: 'Impact';
+}
+.preview {
+    width: 500px;
+    height: 370px;
+			}
+.description {
+	color: #888;
+	font-family: sans-serif;
+	font-size: large;
+	width:100%;
+	text-align:center;
+	margin-top: 0.5em;
+}
+#links {
+    z-index: 1000;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Impact';
+    color: rgba(255, 255, 255, 0.9);
+    padding: 5px;
+    /* margin-right: 10px; */
+    /* margin-bottom: 10px; */
+    text-decoration: none;
+transform-origin: bottom left;}
+.links a{
+	color:white;
+	font-size: 12px;
+	text-decoration: none;
+}
+.adcard {
+	position: fixed;
+  	bottom: -20px;
+  	left: 50%;
+  	/* bring your own prefixes */
+  	transform: translate(-50%, 0%);
+	border:5px solid black;
+}
+#preroll {
+	position:fixed;
+	z-index:10000;
+}
+.container {
+    width:100%;
+    text-align:center;
+}
+
+.left {
+    float:left;
+    margin-top:10px;
+    width:100px;
+}
+
+.center {
+    display: inline-block;
+    margin:0 auto;
+    width:100px;
+}
+
+.right {
+    float:right;
+    margin-top:10px;
+    width:100px;
+}
+.buy1 {
+    cursor: pointer;
+}
+.sb {
+    border:none;
+    background-color:rgba(0,0,0,0);
+    font-size:40px;
+	cursor: pointer;
+}
+
+#logoWrap
+{
+	position:absolute;
+	top: 50%;
+	margin-top: -392px;
+	width:100%;
+	z-index:1;
+}
+
+h1#logo{
+	font-size: 70px;
+	color:#fff;
+	text-align:center;
+	z-index:2;
+	position:absolute;
+	width:100%;
+	text-shadow: 0px 5px rgba(255,255,255,0.5);
+}
+
+
+#leftWrap {
+	position:absolute;
+	top: 50%;
+	left:50%;
+	margin-left: -550px;
+	width: 336;
+	height: 280px;
+	/* background-color: rgba(0,0,0,0.5); */
+	z-index:1;
+	/* display: none; */
+	margin-top: -256px;
+	text-align: center;
+	/* border-radius: 12px; */
+}
+
+div#middleWrap {
+    #background-color: #0000ff85;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 408px;
+    margin-top: -228px;
+    margin-left: -204px;
+    height: 420px;
+    z-index: 1;
+}
+
+div#rightWrap
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -226px;
+	margin-left: 214px;
+	width: 328px;
+	height: 242px;
+	background-color: rgb(188 188 188 / 92%);
+	z-index: 1;
+	/* display: none; */
+	text-align: center;
+	/* border-radius: 10px; */
+	overflow: auto;
+	overflow-y: scroll;
+	border: 4px solid #aaaaaa;
+}
+
+div#bottomWrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    margin-top: 36px;
+    margin-left: -470px;width: 980px;
+    height: 260px;
+    /* background-color: rgba(0,0,0,0.5); */
+    z-index: 9;
+    text-align: center;
+}
+
+@media screen and (max-width: 1200px), screen and (max-height: 850px) {
+	#logoWrap{
+		/*margin-top: -225px;*/
+	}
+	h1#logo{
+		/*margin-top: -22px;*/
+		top:-30px;
+	}
+
+	#name{
+		height: 85px;
+		font-size:32px;
+	}
+	select#skin{
+		height: 86px;
+	}
+	input#play{
+		height: 86px;
+		line-height: 55px;
+	}
+	#controls{
+		font-size: 18px;
+	}
+
+	div#middleWrap{
+		/* top:300px; */
+		width: 327px;
+		margin-left: -164px;
+	}
+	div#leftWrap{
+		margin-left: -512px;
+		/* top:285px; */
+	}
+
+	div#rightWrap{
+		margin-left: 175px;
+		/* top: 265px; */
+	}
+
+	#chat-window{
+		width: 26%;
+		max-width: 240px;
+	}
+	#chat-scroll{
+		height:100px;
+	}
+	p.chat-msg{
+		font-size:13px;
+		padding:3px;
+	}
+
+	table#controls{
+		font-size: 16px;
+	}
+
+	table#controls td {
+		padding: 8px 2px;
+	}
+
+	table#controls #left{
+		width:40px;
+	}
+
+	table#controls #right{
+		width:40px;
+	}
+
+	table#controls #speed{
+		width: 56px;
+		height: 36px;
+	}
+
+	table#controls #vehicle{
+		width:44px;
+		height:30px;
+	}
+}
+
+
+@media screen and (max-width: 1023px), screen and (max-height: 738px) {
+	#logoWrap{
+		/*margin-top:-220px*/
+	}
+	h1#logo{
+		/*margin-top: 0;*/
+	}
+
+	#name{
+		height: 75px;
+		font-size:32px;
+	}
+	select#skin{
+		height:75px;
+		margin-top:12px
+	}
+	input#play{
+		height:75px;
+		margin-top:12px;
+		line-height: 43px;
+	}
+
+
+	#controls{
+		/* padding:10px; */
+		font-size:14px;
+	}
+
+	div#middleWrap{
+		width: 260px;
+		margin-left: -104px;
+	}
+	div#leftWrap
+	{
+		margin-left: -452px;
+		/* width: 300px; */
+		/* height: 250px; */
+		/* max-width: 300px; */
+		/* max-height: 250px; */
+		/* overflow-x: auto; */
+		/* overflow-y: overlay; */
+	}
+	div#rightWrap
+	{
+		margin-left: 169px;
+		height: 242px;
+		width: 284px;
+	}
+
+	#chat-window{
+		width: 26%;
+	}
+	#chat-scroll{
+		height:100px;
+	}
+	p.chat-msg{
+		font-size:13px;
+		padding:3px;
+	}
+
+	table#controls #left{
+		width: 32px;
+	}
+
+	table#controls #right{
+		width: 32px;
+	}
+
+	table#controls #speed{
+		width: 39px;
+		height: 30px;
+	}
+
+	table#controls #vehicle{
+		width: 35px;
+		height: 23px;
+	}
+
+	div#shoutout{
+		font-size: 21px;
+	}
+}
+
+@media screen and (max-width: 904px) {
+	div#middleWrap{
+		margin-left: -52px;
+	}
+	div#leftWrap
+	{
+		margin-left: -397px;
+	}
+	div#rightWrap{
+		width: 179px;
+		margin-left: 218px;
+	}
+	div#shoutout{
+		/* font-size:12px; */
+	}
+}
+
+@media screen and (max-height: 790px)
+{
+	div#bottomWrap{
+		/* top: 377px; */
+		/* display: none; */
+	}
+	div#middleWrap {
+		/* top:280px; */
+	}
+	div#leftWrap{
+		/* top:265px; */
+	}
+	div#rightWrap {
+		/* top:250px; */
+	}
+}
+
+@media screen and (max-height: 738px)
+{
+	div#bottomWrap{
+		/* top: 185px; */
+		/* display: none; */
+	}
+}
+
+div#mainWrap {position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;}
+
+div#crosspromoWrap {position: absolute;top: 1%;right: 1%;width: 140px;background-color: rgb(188 188 188 / 92%);padding: 5px;transform-origin: top right;z-index: 999;}
