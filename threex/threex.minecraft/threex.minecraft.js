@@ -222,18 +222,18 @@ THREEx.MinecraftChar.prototype.loadWellKnownSkin	= function(name, onLoad){
 }
 
 THREEx.MinecraftChar.skinWellKnownUrls	= {
-	'steve'			: 'images/char.png',
-	'mario'			: 'images/Mario.png',
-	'sonic'	: 'images/Sonicthehedgehog.png',
-	'agent'		: 'images/agentsmith.png',
-	'ninja'		: 'images/martialartist.png',
+	'steve'			: 'https://cdn.jsdelivr.net/gh/google-edu-ca/yt@main/threex/threex.minecraft/images/char.png',
+	'mario'			: 'https://cdn.jsdelivr.net/gh/google-edu-ca/yt@main/threex/threex.minecraft/images/Mario.png',
+	'sonic'	: 'https://cdn.jsdelivr.net/gh/google-edu-ca/yt@main/threex/threex.minecraft/images/Sonicthehedgehog.png',
+	'agent'		: 'https://cdn.jsdelivr.net/gh/google-edu-ca/yt@main/threex/threex.minecraft/images/agentsmith.png',
+	'ninja'		: 'https://cdn.jsdelivr.net/gh/google-edu-ca/yt@main/threex/threex.minecraft/images/martialartist.png',
 	
-	'spiderman'		: 'images/Spiderman.png',
-	'joker'			: 'images/Joker.png',
-	'superman'		: 'images/Superman.png',
-	'batman'		: 'images/batman.png',
-	'flash'		: 'images/theflash.png',
-	'god'			: 'images/god.png',
+	'spiderman'		: 'https://cdn.jsdelivr.net/gh/google-edu-ca/yt@main/threex/threex.minecraft/images/Spiderman.png',
+	'joker'			: 'https://cdn.jsdelivr.net/gh/google-edu-ca/yt@main/threex/threex.minecraft/images/Joker.png',
+	'superman'		: 'https://cdn.jsdelivr.net/gh/google-edu-ca/yt@main/threex/threex.minecraft/images/Superman.png',
+	'batman'		: 'https://cdn.jsdelivr.net/gh/google-edu-ca/yt@main/threex/threex.minecraft/images/batman.png',
+	'flash'		: 'https://cdn.jsdelivr.net/gh/google-edu-ca/yt@main/threex/threex.minecraft/images/theflash.png',
+	'god'			: 'https://cdn.jsdelivr.net/gh/google-edu-ca/yt@main/threex/threex.minecraft/images/god.png',
 	
 	
 	// '3djesus'		: 'images/3djesus.png',
