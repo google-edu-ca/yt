@@ -86,66 +86,79 @@
     let scopesForInit;
     let firstAd = true;
 
-    const script = document.createElement("script");
-    script.src = loaderUrl;
-    script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-            spinner.style.display = "none";
-            progressBarEmpty.style.display = "";
-            progressBarFull.style.width = `${100 * progress}%`;
-        }).then((unityInstance) => {
-            myGameInstance = unityInstance;
-            loadingCover.style.display = "none";
-        }).catch((message) => {
-            alert(message);
-        });
-    };
-
-    YaGames.init()
-        .then(ysdk => {
-            console.log('Init Yandex SDK');
-            window.ysdk = ysdk;
-            initSDK = true;
-            InitPayments();
-
-            try {
-                ysdk.shortcut.canShowPrompt().then(prompt => {
-                    if (prompt.canShow) {
-                        promptCanShow = true;
-                    }
+        const script = document.createElement("script");
+        script.src = loaderUrl;
+        script.onload = () => {
+            StartUnityInstance = function () {
+                createUnityInstance(canvas, config, (progress) => {
+                    spinner.style.display = "none";
+                    progressBarEmpty.style.display = "";
+                    progressBarFull.style.width = `${100 * progress}%`;
+                }).then((unityInstance) => {
+                    myGameInstance = unityInstance;
+                    loadingCover.style.display = "none";
+                }).catch((message) => {
+                    console.error(message);
                 });
-            } catch (e) {
-                console.error('CRASH canShowPrompt: ', e.message);
-            }
+            };
+            if (LocalHost())
+                StartUnityInstance_IfUnloaded();
+        };
 
+        function StartUnityInstance_IfUnloaded() {
+            if (spinner.style.display !== "none")
+                StartUnityInstance();
+        }
+
+        function LocalHost() {
+            var host = window.location.hostname;
+            if (host == "localhost" || host == "127.0.0.1")
+                return true;
+            else return false;
+        }
+
+        setTimeout(StartUnityInstance_IfUnloaded, 5000);
+
+        InitYSDK();
+        async function InitYSDK() {
             try {
-                ysdk.feedback.canReview().then(({ value, reason }) => {
-                    if (value) {
-                        reviewCanShow = true;
-                    } else {
-                        console.log('reviewCanShow = false', reason)
-                    }
-                })
+                if (LocalHost()) return;
 
-                ysdk.shortcut.canShowPrompt().then(prompt => {
-                    if (prompt.canShow) {
-                        promptCanShow = true;
-                    }
-                });
+                console.log('Init Yandex SDK');
+                ysdk = await YaGames.init();
+
+                InitPayments();
+                // First ad false
+
+                // Additional init modules
+cloudSaves = await LoadCloud();
+console.log('Init Storage ysdk');
+
+environmentData = await RequestingEnvironmentData();
+console.log('Init Envir ysdk');
+
+playerData = await InitPlayer();
+console.log('Init Player ysdk');
+
+flasgsData = await GetFlags();
+console.log('Init Flags ysdk');
+
+
             } catch (e) {
-                console.error('CRASH canShowFeedback: ', e.message);
+                console.error('CRASH Initialization SDK: ', e);
             }
 
-            if (initGame == true) {
-                InitSDK(photoSizeForInit, scopesForInit)
-                if (firstAd)
-                    FullscreenShow();
+            StartUnityInstance_IfUnloaded();
+        }
+
+        function InitGame() {
+            console.log('Init Game Success');
+            initGame = true;
+
+            if (nowFullAdOpen == true && myGameInstance != null) {
+                myGameInstance.SendMessage('YandexGame', 'OpenFullAd');
             }
-            else {
-                if (firstAd)
-                    ysdk.adv.showFullscreenAdv();
-            }
-        });
+        }
 
     function InitSDK(photoSize, scopes) {
         console.log('Init GAME');
